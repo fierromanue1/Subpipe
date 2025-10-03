@@ -1,0 +1,100 @@
+{
+  "paths": {
+    "video_dir": "data/video",
+    "video_with_subs_dir": "data/video_with_subs",
+    "audio_dir": "data/audio",
+    "subs_original_dir": "data/subs_original",
+    "subs_translated_dir": "data/subs_translated",
+    "logs_dir": "data/logs",
+    "video_file": "sample.mp4",
+    "audio_file": "sample.mp3",
+    "subs_translated_file_srt": "translated.srt",
+    "subs_translated_file_txt": "translated.txt",
+    "subs_original_file": "original.srt",
+    "subs_original_file_json": "segments.json",
+    "output_soft": "sample_output_soft.mp4",
+    "output_burned": "sample_output_burned.mp4"
+  },
+  "ffmpeg": {
+    "_comment_ffmpeg": "FFmpeg settings for subtitle rendering. 'crf' controls video quality (0-51, lower is better). 'preset' affects encoding speed (e.g., ultrafast, fast, medium, slow).",
+    "font_name": "Arial",
+    "font_size": 24,
+    "primary_colour": "&H00FFFFFF",
+    "outline_colour": "&H00000000",
+    "border_style": 3,
+    "outline": 1,
+    "shadow": 0,
+    "preset": "medium",
+    "crf": 23,
+    "pix_fmt": "yuv420p",
+    "subtitle_position": "bottom",
+    "_comment_subtitle_position": "Position of burned subtitles: 'bottom', 'top', or 'center'.",
+    "hwaccel": "auto",
+    "_comment_hwaccel": "Hardware acceleration for FFmpeg: 'auto', 'cuda', or 'none'."
+  },
+  "models": {
+    "_comment_source_lang": "Source language for transcription. Set to 'auto' for auto-detection or use 'en','jp' (e.g., 'de'). See https://huggingface.co/openai/whisper-large-v3 for 99 supported languages.",
+    "source_lang": "auto",
+    
+    "_comment_whisper_model": "Whisper model for transcription: tiny, base, small, medium, large-v3, large-v3-turbo. Larger models are more accurate but slower.",
+    "whisper_model": "medium",
+
+    "_comment_translation_model": "Translation model: 'facebook/nllb-200-1.3B' (accurate) or 'facebook/nllb-200-distilled-600M' (faster). Supports 196 languages, see https://huggingface.co/facebook/nllb-200-1.3B.",
+    "translation_model": "facebook/nllb-200-1.3B",
+    
+    "_comment_target_lang": "Target language for translation in NLLB format (e.g., 'tur_Latn', 'eng_Latn', 'jpn_Jpan'). Do NOT use short codes like 'tr', 'en'.",
+    "target_lang": "tur_Latn",
+    
+    "language_code_map": {
+      "_comment_language_code_map": "Maps short language codes to NLLB format. Add more languages as needed.",
+      "en": "eng_Latn",
+      "tr": "tur_Latn",
+      "es": "spa_Latn",
+      "fr": "fra_Latn",
+      "de": "deu_Latn",
+      "ja": "jpn_Jpan",
+      "zh": "zho_Hans",
+      "ko": "kor_Hang",
+      "ar": "ara_Arab",
+      "ru": "rus_Cyrl"
+    }
+  },
+  "logging": {
+    "level": "DEBUG",
+    "format": "%(asctime)s - %(levelname)s - %(message)s",
+    "max_file_size": "10MB",
+    "log_file": "pipeline.log",
+    "_comment_log_file": "Name of the unified log file for all pipeline steps."
+  },
+  "subtitles": {
+    "_comment_mode": "Subtitle type: 'soft' (embedded, toggleable) or 'burned' (hardcoded into video).",
+    "mode": "burned",
+    "_comment_max_line_length": "Maximum characters per subtitle line for readability.",
+    "max_line_length": 60,
+    "_comment_max_lines": "Maximum number of subtitle lines displayed at once.",
+    "max_lines": 2
+  },
+  "audio_extraction": {
+    "use_ffmpeg": true,
+    "_comment_use_ffmpeg": "Use FFmpeg instead of MoviePy for audio extraction (faster with hwaccel)."
+  },
+  "whisper_transcription": {
+    "_comment_whisper_transcription": "Parameters for Whisper transcription model.",
+
+    "_comment_beam_size": "Number of beams for beam search. Higher values increase accuracy but slow down transcription.",
+    "beam_size": 5,
+
+    "_comment_vad_filter": "Enable Voice Activity Detection to filter silence.",
+    "vad_filter": true,
+    
+    "_comment_word_timestamps": "Include word-level timestamps in transcription output.",
+    "word_timestamps": true,
+    
+    "_comment_min_silence_duration_ms": "Minimum silence duration (ms) for VAD filter.",
+    "min_silence_duration_ms": 500,
+
+    "_comment_max_initial_timestamp": "Maximum initial timestamp (seconds) for transcription start.",
+    "max_initial_timestamp": 30.0
+
+  }
+}
