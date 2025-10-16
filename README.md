@@ -1,4 +1,4 @@
-# SubPipe: Automated Video Subtitling Pipeline 🎬
+# SubPipe: Automated Video Subtitling Pipeline
 
 SubPipe is a Python-based pipeline that automates the process of
 extracting audio from videos, transcribing speech, translating text, and
